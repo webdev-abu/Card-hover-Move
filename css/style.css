@@ -103,7 +103,7 @@ body{
     padding-right: 3px;
 }
 .card_button{
-
+    text-align: center;
 }
 .card_button a{
     width: 25px;
