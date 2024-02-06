@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+body{
+    font-family: 'Roboto Mono', monospace;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    background: #2C3A47;
+}
+.container{
+    width: 1240px;
+    margin: auto;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    padding: 30px;
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.title h1{
+    font-size: 35px;
+    font-weight: 700;
+    color: #fd9644;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.title p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #fd9644;
+    margin-bottom: 50px;
+}
+.card_area{
+    width: 300px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+/* .card_area:hover{
+    transform: scaleZ(2);
+    visibility: visible;
+} */
+.card_area:hover .card_details{
+    top: 100%;
+    opacity: 1;
+    z-index: 1;
+}
+.card_title{
+    width: 270px;
+    background: #01a3a4;
+    padding: 15px;
+    visibility: visible;
+}
+.card_details{
+    width: 270px;
+    padding: 15px;
+    text-align: center;
+    background: #01a3a4;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    opacity: 0;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    transition: all 1.5s ease-in-out;
+}
+.card_text h3{
+    font-size: 18px;
+    font-weight: 700;
+    color: #f7b731;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.card_text p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+.card_price p{
+    font-size: 18px;
+    font-weight: 700;
+    color: #f7b731;
+    margin-bottom: 20px;
+}
+.card_price p span{
+    color: red;
+    text-decoration: line-through;
+    margin-right: 30px;
+}
+.card_price p i,.card_price p span i{
+    padding-right: 3px;
+}
+.card_button{
+
+}
+.card_button a{
+    width: 25px;
+    height: 22px;
+    border-radius: 50%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid #ff9f43;
+    background: #ff9f43;
+    transform: translateY(150%);
+    opacity: 0;
+}
+.card_details:hover .card_button a:first-child{
+    opacity: 1;
+    animation: move 0.5s ease-in-out forwards;
+}
+.card_details:hover .card_button a:nth-child(2){
+    opacity: 1;
+    animation: move 1s ease-in-out forwards;
+}
+.card_details:hover .card_button a:last-child{
+    opacity: 1;
+    animation: move 1.5s ease-in-out forwards;
+}
+.card_button a i{
+    font-size: 22px;
+    color: #000000;
+}
+.card_button a:hover{
+    width: auto;
+    border-radius: 0px;
+}
+.card_button a:hover i{
+    padding-right: 10px;
+}
+
+@keyframes move{
+    0%{
+        transform: translateY(150%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
